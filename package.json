@@ -1,23 +1,38 @@
 {
   "name": "babel-example",
   "version": "1.0.0",
-  "description": "an example showing babel usage",
-  "main": "index.js",
+  "description": "an example showing a transpiled bundle usage",
+  "main": "lib/index.js",
+  "browser": "lib/browser.js",
+  "module": "lib/module.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rollup -c"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/subsidel/babel-example.git"
+    "url": "git+https://github.com/subsidel/transpile-bundle-example.git"
   },
   "keywords": [
+    "rollup",
     "babel",
     "example"
   ],
   "author": "Joel Howard-White <joel.howard@protonmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/subsidel/babel-example/issues"
+    "url": "https://github.com/subsidel/transpile-bundle-example/issues"
   },
-  "homepage": "https://github.com/subsidel/babel-example#readme"
+  "homepage": "https://github.com/subsidel/transpile-bundle-example#readme",
+  "devDependencies": {
+    "@babel/core": "^7.4.0",
+    "@babel/plugin-external-helpers": "^7.2.0",
+    "@babel/preset-env": "^7.4.2",
+    "rollup": "^1.7.0",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-commonjs": "^9.2.1",
+    "rollup-plugin-node-resolve": "^4.0.1"
+  },
+  "dependencies": {
+    "melanite": "^1.1.0"
+  }
 }
